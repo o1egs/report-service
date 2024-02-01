@@ -1,0 +1,27 @@
+package ru.shtyrev.report.exceptions.custom;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class ReportAlreadySolvedException extends RuntimeException {
+    public ReportAlreadySolvedException() {
+        super();
+    }
+
+    public ReportAlreadySolvedException(String message) {
+        super(message);
+    }
+
+    public ReportAlreadySolvedException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public ReportAlreadySolvedException(Throwable cause) {
+        super(cause);
+    }
+
+    protected ReportAlreadySolvedException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
+}
